@@ -1,10 +1,10 @@
-package tech.noahgeren.projecteuler.problems;
+package com.noahgeren.projecteuler.problems;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import tech.noahgeren.projecteuler.utils.Problem;
+import com.noahgeren.projecteuler.utils.Problem;
 
 public class Problem062 extends Problem {
 

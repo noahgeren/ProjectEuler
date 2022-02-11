@@ -1,10 +1,10 @@
-package tech.noahgeren.projecteuler.problems;
+package com.noahgeren.projecteuler.problems;
 
 import java.util.List;
 
-import tech.noahgeren.projecteuler.utils.Fraction;
-import tech.noahgeren.projecteuler.utils.Primes;
-import tech.noahgeren.projecteuler.utils.Problem;
+import com.noahgeren.projecteuler.utils.Fraction;
+import com.noahgeren.projecteuler.utils.Primes;
+import com.noahgeren.projecteuler.utils.Problem;
 
 public class Problem070 extends Problem {
 	

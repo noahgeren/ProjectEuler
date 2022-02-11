@@ -1,4 +1,4 @@
-package tech.noahgeren.projecteuler.utils;
+package com.noahgeren.projecteuler.utils;
 
 public abstract class Problem {
 	

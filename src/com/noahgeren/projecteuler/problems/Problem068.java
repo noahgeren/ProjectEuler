@@ -1,11 +1,11 @@
-package tech.noahgeren.projecteuler.problems;
+package com.noahgeren.projecteuler.problems;
 
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import tech.noahgeren.projecteuler.utils.Problem;
+import com.noahgeren.projecteuler.utils.Problem;
 
 public class Problem068 extends Problem {
 	

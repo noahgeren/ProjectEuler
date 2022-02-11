@@ -1,6 +1,6 @@
-package tech.noahgeren.projecteuler;
+package com.noahgeren.projecteuler;
 
-import tech.noahgeren.projecteuler.utils.Problem;
+import com.noahgeren.projecteuler.utils.Problem;
 
 public class ProblemLauncher {
 	
@@ -8,8 +8,9 @@ public class ProblemLauncher {
 	
 	public static void main(String[] args) {
 		try {
+			@SuppressWarnings("deprecation")
 			final Problem problem = (Problem) Class.forName(
-					"tech.noahgeren.projecteuler.problems.Problem"
+					"com.noahgeren.projecteuler.problems.Problem"
 							+ String.format("%03d", PROBLEM)).newInstance();
 			final long startTime = System.currentTimeMillis();
 			try {

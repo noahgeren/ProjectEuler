@@ -1,12 +1,12 @@
-package tech.noahgeren.projecteuler.problems;
+package com.noahgeren.projecteuler.problems;
 
 import java.awt.Point;
 import java.awt.Polygon;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-import tech.noahgeren.projecteuler.resources.ResourceLoader;
-import tech.noahgeren.projecteuler.utils.Problem;
+import com.noahgeren.projecteuler.resources.ResourceLoader;
+import com.noahgeren.projecteuler.utils.Problem;
 
 public class Problem102 extends Problem {
 

@@ -1,6 +1,6 @@
-package tech.noahgeren.projecteuler.problems;
+package com.noahgeren.projecteuler.problems;
 
-import tech.noahgeren.projecteuler.utils.Problem;
+import com.noahgeren.projecteuler.utils.Problem;
 
 public class Problem720 extends Problem{
 

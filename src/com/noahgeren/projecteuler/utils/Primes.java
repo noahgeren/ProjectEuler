@@ -1,4 +1,4 @@
-package tech.noahgeren.projecteuler.utils;
+package com.noahgeren.projecteuler.utils;
 
 import java.util.ArrayList;
 import java.util.List;

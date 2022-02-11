@@ -1,4 +1,4 @@
-package tech.noahgeren.projecteuler.resources;
+package com.noahgeren.projecteuler.resources;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
