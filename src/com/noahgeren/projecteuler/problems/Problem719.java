@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.noahgeren.projecteuler.utils.Numbers;
 import com.noahgeren.projecteuler.utils.Problem;
 
 public class Problem719 extends Problem {
@@ -46,7 +47,7 @@ public class Problem719 extends Problem {
 				if(i % 1000l == 0) {
 					System.out.println(i);
 				}
-				long s = pow(i, 2);
+				long s = Numbers.pow(i, 2);
 				if(sNumber(i, s)) {
 					sum = sum.add(BigInteger.valueOf(s));
 				}
@@ -59,7 +60,7 @@ public class Problem719 extends Problem {
 			for(int splits = 1; splits < max; splits++) {
 				long sum = 0, current = 0;
 				for(int bit = 0; bit <= bits; bit++) {
-					current = current * 10l + ((s / pow(10l, bits - bit)) % 10l);
+					current = current * 10l + ((s / Numbers.pow(10l, bits - bit)) % 10l);
 					if(((splits >>> bit) & 1) != 0) {
 						sum += current;
 						current = 0l;
@@ -73,9 +74,5 @@ public class Problem719 extends Problem {
 			return false;
 		}
 		
-		private long pow(long base, int exp) {
-			if(exp == 0) return 1l;
-			return base * pow(base, exp - 1);
-		}
 	}
 }

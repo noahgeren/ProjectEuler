@@ -19,5 +19,10 @@ public class Numbers {
 	public static BigInteger lcm(BigInteger a, BigInteger b) {
 		return a.multiply(b).divide(gcd(a, b));
 	}
+	
+	public static long pow(long base, int exp) {
+		if(exp == 0) return 1l;
+		return base * pow(base, exp - 1);
+	}
 
 }
