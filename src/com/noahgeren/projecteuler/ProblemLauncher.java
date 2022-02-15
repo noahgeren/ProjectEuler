@@ -4,7 +4,7 @@ import com.noahgeren.projecteuler.utils.Problem;
 
 public class ProblemLauncher {
 	
-	private static final int PROBLEM = 719;
+	private static final int PROBLEM = 70;
 	
 	public static void main(String[] args) {
 		try {
@@ -14,7 +14,7 @@ public class ProblemLauncher {
 							+ String.format("%03d", PROBLEM)).newInstance();
 			final long startTime = System.currentTimeMillis();
 			try {
-				System.out.println("Starting to solve problem.");
+				System.out.println("Starting to solve problem " + PROBLEM + ".");
 				System.out.println(problem.solve());
 				System.out.println("Solve time: " + (System.currentTimeMillis() - startTime) + "ms");
 			} catch(Exception e) {

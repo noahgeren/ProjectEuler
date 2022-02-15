@@ -70,7 +70,7 @@ public class Fraction extends java.lang.Number implements Comparable<Fraction> {
 
 	@Override
 	public int compareTo(Fraction o) {
-		return num.multiply(o.den).subtract(den.multiply(o.num)).compareTo(den.multiply(o.den));
+		return num.multiply(o.den).subtract(den.multiply(o.num)).compareTo(BigInteger.ZERO);
 		
 	}
 	
