@@ -10,11 +10,11 @@ import com.noahgeren.projecteuler.resources.ResourceLoader;
 import com.noahgeren.projecteuler.utils.Point;
 import com.noahgeren.projecteuler.utils.Problem;
 
-public class Problem081 extends Problem {
+public class Problem082 extends Problem {
 	
 	private static final int SIZE = 80;
 	
-	private static final int MIN_ROW_MOVE = 1, MIN_COL_MOVE = 1;
+	private static final int MIN_ROW_MOVE = -1, MIN_COL_MOVE = 1;
 
 	@Override
 	public String solve() {
@@ -29,16 +29,33 @@ public class Problem081 extends Problem {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		matrix[0][0].minDistance = matrix[0][0].weight;
+		int min = Integer.MAX_VALUE;
+		for(int row = 0; row < SIZE; row++) {
+			int dist = solveFromRow(matrix, row);
+			if(dist < min) {
+				System.out.println(row);
+				min = dist;
+			}
+		}
+		return "Min Distance: " + min;
+	}
+	
+	public int solveFromRow(Node[][] matrix, int row) {
+		for(int i = 0; i < SIZE; i++) {
+			for(int j = 0; j < SIZE; j++) {
+				matrix[i][j].minDistance = Integer.MAX_VALUE;
+			}
+		}
+		matrix[row][0].minDistance = matrix[row][0].weight;
 		ArrayList<Node> unsettled = new ArrayList<>();
 		HashSet<Point> settled = new HashSet<>();
-		unsettled.add(matrix[0][0]);
+		unsettled.add(matrix[row][0]);
 		while(!unsettled.isEmpty()) {
 			Collections.sort(unsettled);
 			Node current = unsettled.get(0);
 			unsettled.remove(0);
-			if(current.x == SIZE - 1 && current.y == SIZE - 1) {
-				return "Min Distance: " + current.minDistance;
+			if(current.y == SIZE - 1) {
+				return current.minDistance;
 			}
 			for(int rowMove = MIN_ROW_MOVE; rowMove <= 1; rowMove += 2) {
 				Node move;
@@ -60,7 +77,8 @@ public class Problem081 extends Problem {
 			}
 			settled.add(current);
 		}
-		return "Something went wrong";
+		System.err.println("Something went wrong");
+		return Integer.MAX_VALUE;
 	}
 	
 	static class Node extends Point implements Comparable<Node> {

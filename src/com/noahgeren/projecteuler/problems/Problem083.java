@@ -10,11 +10,11 @@ import com.noahgeren.projecteuler.resources.ResourceLoader;
 import com.noahgeren.projecteuler.utils.Point;
 import com.noahgeren.projecteuler.utils.Problem;
 
-public class Problem081 extends Problem {
+public class Problem083 extends Problem {
 	
 	private static final int SIZE = 80;
 	
-	private static final int MIN_ROW_MOVE = 1, MIN_COL_MOVE = 1;
+	private static final int MIN_ROW_MOVE = -1, MIN_COL_MOVE = -1;
 
 	@Override
 	public String solve() {
