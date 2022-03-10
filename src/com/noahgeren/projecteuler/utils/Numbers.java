@@ -24,5 +24,15 @@ public class Numbers {
 		if(exp == 0) return 1l;
 		return base * pow(base, exp - 1);
 	}
+	
+	public static int factorial(int n) {
+		if(n < 0) {
+			throw new ArithmeticException("n cannot be less than 0");
+		}
+		if(n == 0) {
+			return 1;
+		}
+		return n * factorial(n - 1);
+	}
 
 }
