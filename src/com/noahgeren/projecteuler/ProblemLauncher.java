@@ -4,7 +4,7 @@ import com.noahgeren.projecteuler.utils.Problem;
 
 public class ProblemLauncher {
 	
-	private static final int PROBLEM = 34;
+	private static final int PROBLEM = 800;
 	
 	public static void main(String[] args) {
 		try {
